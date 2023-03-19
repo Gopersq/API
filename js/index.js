@@ -99,7 +99,7 @@ getUser(1938)
 
 patchUser(1938)
 
-deleteUser(1951)
+deleteUser(1952)
 
 getAll();
 
@@ -164,8 +164,6 @@ removeUser(`${BASE_URL}/1960`)
 
 
 
-   
-
 
 const url = 'https://dog.ceo/api/breeds/image/random';
 const btn = document.querySelector('.btn');
@@ -189,6 +187,11 @@ const randomDog = async () => {
 }
 
 btn.addEventListener('click', () => {
-   randomDog()
+   let isLOaded = img.complete;
+
+   if (isLOaded) {
+      randomDog()
+   }
 })
 
+randomDog()  
